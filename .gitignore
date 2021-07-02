@@ -1,0 +1,6 @@
+*.pkl
+*.tar
+*.tag
+.vscode
+*__pycache__/
+*.pyc

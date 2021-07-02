@@ -1,0 +1,14 @@
+setproctitle==1.2.2
+six==1.11.0
+pandas==0.20.3
+numpy==1.19.5
+tqdm==4.51.0
+transformers==4.8.1
+requests==2.18.4
+matplotlib==2.1.0
+apex==0.9.10dev
+boto3==1.17.104
+botocore==1.20.104
+scikit_learn==0.24.2
+tensorflow==2.5.0
+torch==1.9.0

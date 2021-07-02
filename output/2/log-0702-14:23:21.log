@@ -1,0 +1,250 @@
+07/02 14:23:23  Configs:
+{
+    "__module__": "config",
+    "bert_type": "bert",
+    "task": 2,
+    "i": 102,
+    "model_choice": "baseline",
+    "log_file": "log-0702-14:23:21.log",
+    "batch_size": 32,
+    "test_batch_size": 32,
+    "num_epochs": 5,
+    "save_epoch": 1,
+    "lr": 7e-05,
+    "max_norm": 1.0,
+    "fp16": 0,
+    "gradient_acc_steps": 1,
+    "hidden_dropout_prob": 0.1,
+    "seed": 1,
+    "train": 1,
+    "infer": 1,
+    "continue_train": 0,
+    "use_bio": 0,
+    "gpuid": "0,1,2,3"
+}
+07/02 14:23:23  Loaded tokenizer
+07/02 14:23:23  Reading training file ../data/Data2_train_utf16.tag...
+07/02 14:23:26  Reading test file ../data/Data2_test_utf16.tag...
+07/02 14:23:32  Finished and saved!
+07/02 14:23:32  Tokenizing data...
+07/02 14:23:36  Tokenizing data...
+07/02 14:23:38  Loaded 33121 Training samples.
+07/02 14:23:38  Loaded 14196 Validating samples.
+07/02 14:24:02  Starting training process...
+07/02 14:24:02  start_epoch: 0
+07/02 14:24:50  [Epoch: 1,  1088/ 33121 points] total loss, accuracy per batch: 9.804, 21.010
+07/02 14:25:03  [Epoch: 1,  2176/ 33121 points] total loss, accuracy per batch: 3.903, 31.653
+07/02 14:25:17  [Epoch: 1,  3264/ 33121 points] total loss, accuracy per batch: 2.763, 32.920
+07/02 14:25:30  [Epoch: 1,  4352/ 33121 points] total loss, accuracy per batch: 2.297, 33.433
+07/02 14:25:43  [Epoch: 1,  5440/ 33121 points] total loss, accuracy per batch: 1.954, 33.778
+07/02 14:25:56  [Epoch: 1,  6528/ 33121 points] total loss, accuracy per batch: 1.874, 34.297
+07/02 14:26:10  [Epoch: 1,  7616/ 33121 points] total loss, accuracy per batch: 1.774, 35.281
+07/02 14:26:23  [Epoch: 1,  8704/ 33121 points] total loss, accuracy per batch: 1.691, 34.799
+07/02 14:26:37  [Epoch: 1,  9792/ 33121 points] total loss, accuracy per batch: 1.531, 36.842
+07/02 14:26:50  [Epoch: 1, 10880/ 33121 points] total loss, accuracy per batch: 1.465, 35.767
+07/02 14:27:03  [Epoch: 1, 11968/ 33121 points] total loss, accuracy per batch: 1.468, 35.176
+07/02 14:27:16  [Epoch: 1, 13056/ 33121 points] total loss, accuracy per batch: 1.412, 35.719
+07/02 14:27:29  [Epoch: 1, 14144/ 33121 points] total loss, accuracy per batch: 1.350, 34.627
+07/02 14:27:41  [Epoch: 1, 15232/ 33121 points] total loss, accuracy per batch: 1.284, 36.757
+07/02 14:27:55  [Epoch: 1, 16320/ 33121 points] total loss, accuracy per batch: 1.289, 35.309
+07/02 14:28:08  [Epoch: 1, 17408/ 33121 points] total loss, accuracy per batch: 1.185, 35.108
+07/02 14:28:21  [Epoch: 1, 18496/ 33121 points] total loss, accuracy per batch: 1.300, 35.067
+07/02 14:28:34  [Epoch: 1, 19584/ 33121 points] total loss, accuracy per batch: 1.160, 35.758
+07/02 14:28:47  [Epoch: 1, 20672/ 33121 points] total loss, accuracy per batch: 1.157, 35.710
+07/02 14:29:00  [Epoch: 1, 21760/ 33121 points] total loss, accuracy per batch: 1.163, 36.074
+07/02 14:29:13  [Epoch: 1, 22848/ 33121 points] total loss, accuracy per batch: 1.138, 35.597
+07/02 14:29:27  [Epoch: 1, 23936/ 33121 points] total loss, accuracy per batch: 1.121, 36.366
+07/02 14:29:40  [Epoch: 1, 25024/ 33121 points] total loss, accuracy per batch: 0.997, 35.010
+07/02 14:29:55  [Epoch: 1, 26112/ 33121 points] total loss, accuracy per batch: 1.108, 35.031
+07/02 14:30:09  [Epoch: 1, 27200/ 33121 points] total loss, accuracy per batch: 1.046, 36.080
+07/02 14:30:24  [Epoch: 1, 28288/ 33121 points] total loss, accuracy per batch: 1.082, 36.608
+07/02 14:30:38  [Epoch: 1, 29376/ 33121 points] total loss, accuracy per batch: 1.104, 36.231
+07/02 14:30:52  [Epoch: 1, 30464/ 33121 points] total loss, accuracy per batch: 1.006, 36.874
+07/02 14:31:06  [Epoch: 1, 31552/ 33121 points] total loss, accuracy per batch: 1.033, 35.510
+07/02 14:31:20  [Epoch: 1, 32640/ 33121 points] total loss, accuracy per batch: 0.993, 35.052
+07/02 14:31:26  Evaluating test samples...
+07/02 14:38:16  ***** Eval results *****
+07/02 14:38:16    accuracy = 0.858603168009839
+07/02 14:38:16    f1 = 0.9400589970501475
+07/02 14:38:16    precision = 0.9400589970501475
+07/02 14:38:16    recall = 0.9400589970501475
+07/02 14:38:16  Epoch finished, took 853.46 seconds.
+07/02 14:38:16  Losses at Epoch 1: 1.7483791
+07/02 14:38:16  Train accuracy at Epoch 1: 34.7814951
+07/02 14:38:16  Test f1 at Epoch 1: 0.9400590
+07/02 14:38:45  [Epoch: 2,  1088/ 33121 points] total loss, accuracy per batch: 0.769, 36.764
+07/02 14:38:58  [Epoch: 2,  2176/ 33121 points] total loss, accuracy per batch: 0.769, 37.147
+07/02 14:39:11  [Epoch: 2,  3264/ 33121 points] total loss, accuracy per batch: 0.785, 37.598
+07/02 14:39:24  [Epoch: 2,  4352/ 33121 points] total loss, accuracy per batch: 0.713, 35.714
+07/02 14:39:37  [Epoch: 2,  5440/ 33121 points] total loss, accuracy per batch: 0.770, 35.708
+07/02 14:39:50  [Epoch: 2,  6528/ 33121 points] total loss, accuracy per batch: 0.766, 35.815
+07/02 14:40:03  [Epoch: 2,  7616/ 33121 points] total loss, accuracy per batch: 0.755, 37.323
+07/02 14:40:17  [Epoch: 2,  8704/ 33121 points] total loss, accuracy per batch: 0.733, 36.623
+07/02 14:40:30  [Epoch: 2,  9792/ 33121 points] total loss, accuracy per batch: 0.677, 37.040
+07/02 14:40:43  [Epoch: 2, 10880/ 33121 points] total loss, accuracy per batch: 0.728, 36.691
+07/02 14:40:56  [Epoch: 2, 11968/ 33121 points] total loss, accuracy per batch: 0.689, 37.818
+07/02 14:41:09  [Epoch: 2, 13056/ 33121 points] total loss, accuracy per batch: 0.700, 36.284
+07/02 14:41:22  [Epoch: 2, 14144/ 33121 points] total loss, accuracy per batch: 0.691, 34.960
+07/02 14:41:35  [Epoch: 2, 15232/ 33121 points] total loss, accuracy per batch: 0.706, 35.706
+07/02 14:41:48  [Epoch: 2, 16320/ 33121 points] total loss, accuracy per batch: 0.649, 37.131
+07/02 14:42:01  [Epoch: 2, 17408/ 33121 points] total loss, accuracy per batch: 0.727, 37.478
+07/02 14:42:14  [Epoch: 2, 18496/ 33121 points] total loss, accuracy per batch: 0.747, 37.092
+07/02 14:42:28  [Epoch: 2, 19584/ 33121 points] total loss, accuracy per batch: 0.742, 35.940
+07/02 14:42:41  [Epoch: 2, 20672/ 33121 points] total loss, accuracy per batch: 0.651, 36.917
+07/02 14:42:55  [Epoch: 2, 21760/ 33121 points] total loss, accuracy per batch: 0.699, 38.343
+07/02 14:43:08  [Epoch: 2, 22848/ 33121 points] total loss, accuracy per batch: 0.669, 37.336
+07/02 14:43:21  [Epoch: 2, 23936/ 33121 points] total loss, accuracy per batch: 0.686, 35.827
+07/02 14:43:34  [Epoch: 2, 25024/ 33121 points] total loss, accuracy per batch: 0.649, 36.460
+07/02 14:43:47  [Epoch: 2, 26112/ 33121 points] total loss, accuracy per batch: 0.706, 36.544
+07/02 14:44:00  [Epoch: 2, 27200/ 33121 points] total loss, accuracy per batch: 0.734, 35.233
+07/02 14:44:13  [Epoch: 2, 28288/ 33121 points] total loss, accuracy per batch: 0.746, 36.752
+07/02 14:44:26  [Epoch: 2, 29376/ 33121 points] total loss, accuracy per batch: 0.621, 37.107
+07/02 14:44:39  [Epoch: 2, 30464/ 33121 points] total loss, accuracy per batch: 0.735, 36.797
+07/02 14:44:52  [Epoch: 2, 31552/ 33121 points] total loss, accuracy per batch: 0.708, 37.463
+07/02 14:45:06  [Epoch: 2, 32640/ 33121 points] total loss, accuracy per batch: 0.757, 36.063
+07/02 14:45:12  Evaluating test samples...
+07/02 14:51:44  ***** Eval results *****
+07/02 14:51:44    accuracy = 0.8649111786846769
+07/02 14:51:44    f1 = 0.9461819832085319
+07/02 14:51:44    precision = 0.9461819832085319
+07/02 14:51:44    recall = 0.9461819832085319
+07/02 14:51:44  Epoch finished, took 792.09 seconds.
+07/02 14:51:44  Losses at Epoch 2: 0.7159301
+07/02 14:51:44  Train accuracy at Epoch 2: 36.6558824
+07/02 14:51:44  Test f1 at Epoch 2: 0.9461820
+07/02 14:52:07  [Epoch: 3,  1088/ 33121 points] total loss, accuracy per batch: 0.448, 37.880
+07/02 14:52:20  [Epoch: 3,  2176/ 33121 points] total loss, accuracy per batch: 0.442, 37.436
+07/02 14:52:33  [Epoch: 3,  3264/ 33121 points] total loss, accuracy per batch: 0.499, 38.490
+07/02 14:52:46  [Epoch: 3,  4352/ 33121 points] total loss, accuracy per batch: 0.416, 37.863
+07/02 14:52:59  [Epoch: 3,  5440/ 33121 points] total loss, accuracy per batch: 0.464, 37.894
+07/02 14:53:12  [Epoch: 3,  6528/ 33121 points] total loss, accuracy per batch: 0.472, 38.360
+07/02 14:53:25  [Epoch: 3,  7616/ 33121 points] total loss, accuracy per batch: 0.415, 35.814
+07/02 14:53:38  [Epoch: 3,  8704/ 33121 points] total loss, accuracy per batch: 0.442, 36.949
+07/02 14:53:51  [Epoch: 3,  9792/ 33121 points] total loss, accuracy per batch: 0.409, 37.057
+07/02 14:54:04  [Epoch: 3, 10880/ 33121 points] total loss, accuracy per batch: 0.424, 35.962
+07/02 14:54:16  [Epoch: 3, 11968/ 33121 points] total loss, accuracy per batch: 0.441, 37.646
+07/02 14:54:30  [Epoch: 3, 13056/ 33121 points] total loss, accuracy per batch: 0.477, 38.291
+07/02 14:54:43  [Epoch: 3, 14144/ 33121 points] total loss, accuracy per batch: 0.447, 36.317
+07/02 14:54:55  [Epoch: 3, 15232/ 33121 points] total loss, accuracy per batch: 0.484, 37.156
+07/02 14:55:08  [Epoch: 3, 16320/ 33121 points] total loss, accuracy per batch: 0.439, 35.605
+07/02 14:55:21  [Epoch: 3, 17408/ 33121 points] total loss, accuracy per batch: 0.457, 36.718
+07/02 14:55:34  [Epoch: 3, 18496/ 33121 points] total loss, accuracy per batch: 0.467, 37.098
+07/02 14:55:47  [Epoch: 3, 19584/ 33121 points] total loss, accuracy per batch: 0.439, 36.191
+07/02 14:56:00  [Epoch: 3, 20672/ 33121 points] total loss, accuracy per batch: 0.436, 38.280
+07/02 14:56:12  [Epoch: 3, 21760/ 33121 points] total loss, accuracy per batch: 0.414, 37.062
+07/02 14:56:25  [Epoch: 3, 22848/ 33121 points] total loss, accuracy per batch: 0.432, 38.091
+07/02 14:56:38  [Epoch: 3, 23936/ 33121 points] total loss, accuracy per batch: 0.447, 37.969
+07/02 14:56:52  [Epoch: 3, 25024/ 33121 points] total loss, accuracy per batch: 0.443, 37.886
+07/02 14:57:04  [Epoch: 3, 26112/ 33121 points] total loss, accuracy per batch: 0.430, 36.710
+07/02 14:57:17  [Epoch: 3, 27200/ 33121 points] total loss, accuracy per batch: 0.461, 38.226
+07/02 14:57:30  [Epoch: 3, 28288/ 33121 points] total loss, accuracy per batch: 0.437, 36.585
+07/02 14:57:43  [Epoch: 3, 29376/ 33121 points] total loss, accuracy per batch: 0.470, 37.059
+07/02 14:57:56  [Epoch: 3, 30464/ 33121 points] total loss, accuracy per batch: 0.453, 37.742
+07/02 14:58:09  [Epoch: 3, 31552/ 33121 points] total loss, accuracy per batch: 0.432, 37.767
+07/02 14:58:22  [Epoch: 3, 32640/ 33121 points] total loss, accuracy per batch: 0.413, 37.116
+07/02 14:58:28  Evaluating test samples...
+07/02 15:04:46  ***** Eval results *****
+07/02 15:04:46    accuracy = 0.8708619382605636
+07/02 15:04:46    f1 = 0.9523249375992738
+07/02 15:04:46    precision = 0.9523249375992738
+07/02 15:04:46    recall = 0.9523249375992738
+07/02 15:04:46  Epoch finished, took 771.29 seconds.
+07/02 15:04:46  Losses at Epoch 3: 0.4449825
+07/02 15:04:46  Train accuracy at Epoch 3: 37.3074142
+07/02 15:04:46  Test f1 at Epoch 3: 0.9523249
+07/02 15:05:15  [Epoch: 4,  1088/ 33121 points] total loss, accuracy per batch: 0.305, 37.574
+07/02 15:05:28  [Epoch: 4,  2176/ 33121 points] total loss, accuracy per batch: 0.277, 37.129
+07/02 15:05:41  [Epoch: 4,  3264/ 33121 points] total loss, accuracy per batch: 0.300, 37.689
+07/02 15:05:54  [Epoch: 4,  4352/ 33121 points] total loss, accuracy per batch: 0.290, 37.875
+07/02 15:06:07  [Epoch: 4,  5440/ 33121 points] total loss, accuracy per batch: 0.318, 37.722
+07/02 15:06:20  [Epoch: 4,  6528/ 33121 points] total loss, accuracy per batch: 0.286, 38.598
+07/02 15:06:34  [Epoch: 4,  7616/ 33121 points] total loss, accuracy per batch: 0.303, 38.085
+07/02 15:06:46  [Epoch: 4,  8704/ 33121 points] total loss, accuracy per batch: 0.305, 38.762
+07/02 15:07:00  [Epoch: 4,  9792/ 33121 points] total loss, accuracy per batch: 0.326, 40.223
+07/02 15:07:13  [Epoch: 4, 10880/ 33121 points] total loss, accuracy per batch: 0.305, 37.813
+07/02 15:07:26  [Epoch: 4, 11968/ 33121 points] total loss, accuracy per batch: 0.287, 36.482
+07/02 15:07:39  [Epoch: 4, 13056/ 33121 points] total loss, accuracy per batch: 0.330, 37.999
+07/02 15:07:52  [Epoch: 4, 14144/ 33121 points] total loss, accuracy per batch: 0.307, 37.796
+07/02 15:08:05  [Epoch: 4, 15232/ 33121 points] total loss, accuracy per batch: 0.323, 36.682
+07/02 15:08:18  [Epoch: 4, 16320/ 33121 points] total loss, accuracy per batch: 0.307, 36.701
+07/02 15:08:31  [Epoch: 4, 17408/ 33121 points] total loss, accuracy per batch: 0.359, 38.995
+07/02 15:08:44  [Epoch: 4, 18496/ 33121 points] total loss, accuracy per batch: 0.323, 38.013
+07/02 15:08:58  [Epoch: 4, 19584/ 33121 points] total loss, accuracy per batch: 0.293, 36.579
+07/02 15:09:11  [Epoch: 4, 20672/ 33121 points] total loss, accuracy per batch: 0.327, 37.991
+07/02 15:09:24  [Epoch: 4, 21760/ 33121 points] total loss, accuracy per batch: 0.312, 37.119
+07/02 15:09:37  [Epoch: 4, 22848/ 33121 points] total loss, accuracy per batch: 0.377, 38.213
+07/02 15:09:50  [Epoch: 4, 23936/ 33121 points] total loss, accuracy per batch: 0.317, 36.666
+07/02 15:10:02  [Epoch: 4, 25024/ 33121 points] total loss, accuracy per batch: 0.322, 36.151
+07/02 15:10:16  [Epoch: 4, 26112/ 33121 points] total loss, accuracy per batch: 0.284, 37.021
+07/02 15:10:29  [Epoch: 4, 27200/ 33121 points] total loss, accuracy per batch: 0.319, 38.004
+07/02 15:10:41  [Epoch: 4, 28288/ 33121 points] total loss, accuracy per batch: 0.350, 38.325
+07/02 15:10:55  [Epoch: 4, 29376/ 33121 points] total loss, accuracy per batch: 0.351, 37.000
+07/02 15:11:08  [Epoch: 4, 30464/ 33121 points] total loss, accuracy per batch: 0.333, 37.182
+07/02 15:11:21  [Epoch: 4, 31552/ 33121 points] total loss, accuracy per batch: 0.331, 37.687
+07/02 15:11:33  [Epoch: 4, 32640/ 33121 points] total loss, accuracy per batch: 0.327, 37.091
+07/02 15:11:39  Evaluating test samples...
+07/02 15:18:32  ***** Eval results *****
+07/02 15:18:32    accuracy = 0.8723041844763355
+07/02 15:18:32    f1 = 0.956020875879283
+07/02 15:18:32    precision = 0.956020875879283
+07/02 15:18:32    recall = 0.956020875879283
+07/02 15:18:32  Epoch finished, took 810.32 seconds.
+07/02 15:18:32  Losses at Epoch 4: 0.3165462
+07/02 15:18:32  Train accuracy at Epoch 4: 37.6389706
+07/02 15:18:32  Test f1 at Epoch 4: 0.9560209
+07/02 15:18:59  [Epoch: 5,  1088/ 33121 points] total loss, accuracy per batch: 0.214, 38.918
+07/02 15:19:12  [Epoch: 5,  2176/ 33121 points] total loss, accuracy per batch: 0.207, 38.784
+07/02 15:19:25  [Epoch: 5,  3264/ 33121 points] total loss, accuracy per batch: 0.189, 37.756
+07/02 15:19:38  [Epoch: 5,  4352/ 33121 points] total loss, accuracy per batch: 0.224, 37.515
+07/02 15:19:50  [Epoch: 5,  5440/ 33121 points] total loss, accuracy per batch: 0.238, 37.418
+07/02 15:20:04  [Epoch: 5,  6528/ 33121 points] total loss, accuracy per batch: 0.217, 37.760
+07/02 15:20:16  [Epoch: 5,  7616/ 33121 points] total loss, accuracy per batch: 0.235, 38.567
+07/02 15:20:30  [Epoch: 5,  8704/ 33121 points] total loss, accuracy per batch: 0.231, 37.027
+07/02 15:20:42  [Epoch: 5,  9792/ 33121 points] total loss, accuracy per batch: 0.207, 37.119
+07/02 15:20:56  [Epoch: 5, 10880/ 33121 points] total loss, accuracy per batch: 0.210, 39.710
+07/02 15:21:08  [Epoch: 5, 11968/ 33121 points] total loss, accuracy per batch: 0.239, 38.211
+07/02 15:21:21  [Epoch: 5, 13056/ 33121 points] total loss, accuracy per batch: 0.234, 37.911
+07/02 15:21:34  [Epoch: 5, 14144/ 33121 points] total loss, accuracy per batch: 0.204, 37.815
+07/02 15:21:47  [Epoch: 5, 15232/ 33121 points] total loss, accuracy per batch: 0.198, 37.533
+07/02 15:21:59  [Epoch: 5, 16320/ 33121 points] total loss, accuracy per batch: 0.198, 37.951
+07/02 15:22:12  [Epoch: 5, 17408/ 33121 points] total loss, accuracy per batch: 0.234, 37.415
+07/02 15:22:25  [Epoch: 5, 18496/ 33121 points] total loss, accuracy per batch: 0.190, 37.421
+07/02 15:22:38  [Epoch: 5, 19584/ 33121 points] total loss, accuracy per batch: 0.215, 38.054
+07/02 15:22:51  [Epoch: 5, 20672/ 33121 points] total loss, accuracy per batch: 0.237, 37.015
+07/02 15:23:04  [Epoch: 5, 21760/ 33121 points] total loss, accuracy per batch: 0.199, 37.699
+07/02 15:23:17  [Epoch: 5, 22848/ 33121 points] total loss, accuracy per batch: 0.232, 38.603
+07/02 15:23:29  [Epoch: 5, 23936/ 33121 points] total loss, accuracy per batch: 0.213, 37.871
+07/02 15:23:43  [Epoch: 5, 25024/ 33121 points] total loss, accuracy per batch: 0.230, 38.339
+07/02 15:23:55  [Epoch: 5, 26112/ 33121 points] total loss, accuracy per batch: 0.201, 37.618
+07/02 15:24:08  [Epoch: 5, 27200/ 33121 points] total loss, accuracy per batch: 0.208, 39.465
+07/02 15:24:21  [Epoch: 5, 28288/ 33121 points] total loss, accuracy per batch: 0.191, 38.617
+07/02 15:24:34  [Epoch: 5, 29376/ 33121 points] total loss, accuracy per batch: 0.225, 37.313
+07/02 15:24:46  [Epoch: 5, 30464/ 33121 points] total loss, accuracy per batch: 0.206, 38.573
+07/02 15:24:59  [Epoch: 5, 31552/ 33121 points] total loss, accuracy per batch: 0.219, 37.867
+07/02 15:25:12  [Epoch: 5, 32640/ 33121 points] total loss, accuracy per batch: 0.201, 35.944
+07/02 15:25:18  Evaluating test samples...
+07/02 15:32:12  ***** Eval results *****
+07/02 15:32:12    accuracy = 0.8747864050146987
+07/02 15:32:12    f1 = 0.9579795779441798
+07/02 15:32:12    precision = 0.9579795779441798
+07/02 15:32:12    recall = 0.9579795779441798
+07/02 15:32:12  Epoch finished, took 805.78 seconds.
+07/02 15:32:12  Losses at Epoch 5: 0.2147733
+07/02 15:32:12  Train accuracy at Epoch 5: 37.9269608
+07/02 15:32:12  Test f1 at Epoch 5: 0.9579796
+07/02 15:32:23  Finished Training!
+07/02 15:32:23  Loading tokenizer and model...
+07/02 15:32:23  Loaded tokenizer
+07/02 15:32:27  Loaded preproccessed data.
+07/02 15:32:27  Tokenizing data...
+07/02 15:32:30  Tokenizing data...
+07/02 15:32:32  Loaded tokenizer
+07/02 15:32:34  Loaded preproccessed data.
+07/02 15:32:34  Tokenizing data...
+07/02 15:32:35  Loaded 6424 Testing samples.
+07/02 15:32:53  Loaded best model ../output/2/ckpt/baseline_test_model_best_bert_0.pth.tar.
+07/02 15:32:53  Loaded model and optimizer.
+07/02 15:32:53  Done!
+07/02 15:32:53  Starting infering process...
+07/02 15:32:53  Evaluating test samples...
+07/02 15:35:44  Finished Infering!

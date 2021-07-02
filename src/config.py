@@ -15,7 +15,7 @@ class Config(object):
     #     bert_path = '/home/diske/ivenwang/data/prev_trained_model/roberta-large'
 
     task = 1
-    task = 2
+    # task = 2
 
     if task == 1:
         id2label = ['Ax', 'Va', 'Nz', 'Nt', 'No', 'Ad', 'An', 'Vi', 'Nl', 'Dc', 'Vc', 'Nx', 'Nn', 'Vu', 'Vd', 'Ub', 'Rc', 'Vn', 'Aa', 'Ux', 'Pc', 'Vp', 'Sy', 'As', 'Ny', 'Nc', 'Vo', 'Nh', 'Ng', 'Mc', 'Ac', 'Zc', 'Ua', 'Us', 'Ns', 'Oc', 'Mo', 'Cc', 'Vx', 'Uf', 'Vt', 'Fc', 'Ec', 'Qc']
@@ -56,7 +56,7 @@ class Config(object):
     hidden_dropout_prob = 0.1
     seed = 1
 
-    train = 1
+    train = 0
     infer = 1
     continue_train = 0 # continue train from last time
     use_bio = 0

@@ -104,8 +104,6 @@ def train_and_fit(args):
 
             x, labels, _, _ = data
 
-            # print(x, labels)
-
             attention_mask = (x != pad_id).float()
             token_type_ids = torch.zeros((x.shape[0], x.shape[1])).long()
 
@@ -140,8 +138,6 @@ def train_and_fit(args):
 
             total_acc += evaluate_(classification_logits, labels, ignore_idx=-1)[0]
 
-            # print(classification_logits.shape, labels.shape, classification_logits, labels, '\n_________________\n\n')
-            # time.sleep(1)
 
             if (i % update_size) == (update_size - 1):
                 losses_per_batch.append(args.gradient_acc_steps*total_loss/update_size)
@@ -155,21 +151,16 @@ def train_and_fit(args):
         losses_per_epoch.append(sum(losses_per_batch)/len(losses_per_batch))
         accuracy_per_epoch.append(sum(accuracy_per_batch)/len(accuracy_per_batch))
         test_f1_per_epoch.append(results['f1'])
-        # print(out_labels, true_labels)
-        # test_1_f1_per_epoch.append(sklearn.metrics.f1_score([int(i) for i in true_labels], [int(i) for i in out_labels]))
-        # test_1_f1_per_epoch.append(sklearn.metrics.f1_score(true_labels, out_labels))
-
+        
         logging("Epoch finished, took %.2f seconds." % (time.time() - start_time))
         logging("Losses at Epoch %d: %.7f" % (epoch + 1, losses_per_epoch[-1]))
         logging("Train accuracy at Epoch %d: %.7f" % (epoch + 1, accuracy_per_epoch[-1]))
         logging("Test f1 at Epoch %d: %.7f" % (epoch + 1, test_f1_per_epoch[-1]))
-        # logging("Test \"1\" f1 at Epoch %d: %.7f" % (epoch + 1, test_1_f1_per_epoch[-1]))
 
         if test_f1_per_epoch[-1] > best_pred:
             best_pred = accuracy_per_epoch[-1]
             torch.save({
                     'epoch': epoch + 1,\
-                    # 'state_dict': net.module.state_dict(),\
                     'state_dict': net.state_dict(),\
                     'best_f1': test_f1_per_epoch[-1],\
                     'optimizer' : optimizer.state_dict(),\
@@ -190,7 +181,6 @@ def train_and_fit(args):
             #                 (args.model_choice, args.bert_type), test_1_f1_per_epoch, args.ckpt_path)
             torch.save({
                     'epoch': epoch + 1,\
-                    # 'state_dict': net.module.state_dict(),\
                     'state_dict': net.state_dict(),\
                     'best_f1': test_f1_per_epoch[-1],\
                     'optimizer' : optimizer.state_dict(),\
@@ -213,8 +203,6 @@ def train_and_fit(args):
         f.write("| acc | " + re.sub(",", " |", str([int(i * 10000) for i in accuracy_per_epoch])[1:-1]) + " |")
         f.write("\n")
         f.write("| test_f1 | " + re.sub(",", " |", str([int(i * 10000) for i in test_f1_per_epoch])[1:-1]) + " |")
-        # f.write("\n")
-        # f.write("| test_1_f1 | " + re.sub(",", " |", str([int(i * 10000) for i in test_1_f1_per_epoch])[1:-1]) + " |")
         f.write("\n\n")
 
     return net
@@ -250,21 +238,20 @@ def infer_from_trained(args):
     pad_id = tokenizer.pad_token_id
 
     f = open(args.res_path, 'w', encoding='utf16')
-    # df_dev = load_pickle('df_dev_%d.pkl' % args.task, args.pkl_path)
-    # txt = df_dev['sents']
-    # t = df_dev['text']
+    df_dev = load_pickle('df_dev_%d.pkl' % args.task, args.pkl_path)
+    txt = df_dev['sents']
+    t = df_dev['text']
 
-    # print(txt, t, )
-    df_test = load_pickle('df_test_%d.pkl' % args.task, args.pkl_path)
-    txt = df_test['sents']
-    t = df_test['text']
+    # df_test = load_pickle('df_test_%d.pkl' % args.task, args.pkl_path)
+    # txt = df_test['sents']
+    # t = df_test['text']
 
     logging("Evaluating test samples...")
     acc = 0; out_labels = []; true_labels = []
     net.eval()
     with torch.no_grad():
-        # for i, data in tqdm(enumerate(val_loader)):
-        for i, data in enumerate(tqdm(test_loader)):
+        for i, data in tqdm(enumerate(val_loader)): # 得到 val 的预测结果，方便 case study
+        # for i, data in enumerate(tqdm(test_loader)):
             x, labels, _, _ = data
             attention_mask = (x != pad_id).float()
 
@@ -283,12 +270,10 @@ def infer_from_trained(args):
                 true_labels = [args.id2label[ii] for ii in l]
                 count = 0
                 res = ''
-                # f.write(str(txt.iloc[i]) + '\n'  + t.iloc[i] + str(o) + '\n' + str(l) + '\n' + str(out_labels) + "\n" + str(true_labels) + "\n\n")
                 for word in t.iloc[i].split('  '):
                     if '/' in word:
                         word = word.split('/')[0]
                     word_out_labels = out_labels[count:count+len(word)]
-                    # print(word_out_labels, word)
                     if len(word_out_labels):
                         label = word_out_labels[0]
                         count += len(word)
@@ -297,13 +282,9 @@ def infer_from_trained(args):
                         res += '%s/  ' % (word)
                 f.write(res[:-3])
             
-            # f.write(t.iloc[i] + "\n\n")
-            # print(classification_logits[0].shape, labels.shape, '\n',str(txt.iloc[i]), '\n', o, t.iloc[i], str(out_labels), '\n', str(true_labels))
-            # f.write(str(txt.iloc[i]) + '\n'  + t.iloc[i] + str(o) + '\n' + str(l) + '\n' + str(out_labels) + "\n" + str(true_labels) + "\n\n")
-            # f.write(t.iloc[i] + str(o) + '\n' + str(out_labels) + "\n\n")
-            # time.sleep(1)
+            f.write(t.iloc[i] + "\n\n") # 预测 val 的时候要加这句，写 gold 结果
 
-    # print(out_labels, true_labels) 
+
     logging("Finished Infering!")
 
 
